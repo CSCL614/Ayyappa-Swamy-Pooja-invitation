@@ -1,0 +1,2577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayyappa Swamy Pooja Invitation | శ్రీ అయ్యప్ప స్వామి వారి పూజా ఆహ్వానం</title>
+    <meta name="theme-color" content="#0a0101">
+    <meta name="description" content="Swamiye Saranam Ayyappa! Cordially inviting you and your family to the sacred Ayyappa Swamy Pooja on Sunday, 15 November 2026.">
+    <!-- Open Graph for WhatsApp & Social Sharing -->
+    <meta property="og:title" content="Ayyappa Swamy Pooja Invitation | శ్రీ అయ్యప్ప స్వామి వారి పూజా ఆహ్వానం">
+    <meta property="og:description" content="Swamiye Saranam Ayyappa! Cordially inviting you and your family to the sacred Ayyappa Swamy Pooja on Sunday, 15 November 2026.">
+    <meta property="og:image" content="ayyappa_swamy.png">
+    <meta property="og:type" content="website">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&family=Noto+Serif+Telugu:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0a0101;
+            color: #f7e7ce;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* ===== DEVOTIONAL BG CANVAS ===== */
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ===== HANGING BRASS DIYAS (THOOKKU VILAKKU) ===== */
+        .hanging-diya-wrap {
+            position: fixed;
+            top: 0;
+            z-index: 25;
+            pointer-events: none;
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hanging-diya-wrap.left {
+            left: 35px;
+        }
+
+        .hanging-diya-wrap.right {
+            right: 35px;
+        }
+
+        .hanging-diya-wrap.fade-out {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        /* Pendulum swaying container */
+        .diya-sway-left {
+            transform-origin: top center;
+            animation: diya-sway-left 6s ease-in-out infinite;
+            position: relative;
+            width: 90px;
+            height: 264px;
+        }
+
+        .diya-sway-right {
+            transform-origin: top center;
+            animation: diya-sway-right 6s ease-in-out infinite;
+            position: relative;
+            width: 90px;
+            height: 264px;
+        }
+
+        @keyframes diya-sway-left {
+            0% {
+                transform: rotate(-2deg);
+            }
+
+            50% {
+                transform: rotate(1.8deg);
+            }
+
+            100% {
+                transform: rotate(-2deg);
+            }
+        }
+
+        @keyframes diya-sway-right {
+            0% {
+                transform: rotate(1.8deg);
+            }
+
+            50% {
+                transform: rotate(-2deg);
+            }
+
+            100% {
+                transform: rotate(1.8deg);
+            }
+        }
+
+        /* Lamp image */
+        .diya-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 8px 25px rgba(255, 170, 0, 0.35));
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Ambient light aura behind the lamp bowl */
+        .diya-ambient-glow {
+            position: absolute;
+            top: 72%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            width: 150%;
+            height: 55%;
+            border-radius: 50%;
+            background: radial-gradient(ellipse, rgba(255, 180, 0, 0.55) 0%, rgba(255, 120, 0, 0.22) 50%, transparent 75%);
+            filter: blur(12px);
+            pointer-events: none;
+            z-index: 1;
+            animation: ambient-pulse 2s ease-in-out infinite alternate;
+        }
+
+        /* Soft light beam shining downwards */
+        .diya-light-beam {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 160px;
+            background: linear-gradient(180deg, rgba(255, 200, 50, 0.14) 0%, rgba(255, 150, 0, 0.04) 60%, transparent 100%);
+            clip-path: polygon(35% 0%, 65% 0%, 100% 100%, 0% 100%);
+            pointer-events: none;
+            filter: blur(6px);
+            z-index: 0;
+            animation: beam-flicker 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes ambient-pulse {
+            0% {
+                opacity: 0.7;
+                transform: translate(-50%, -20%) scale(0.94);
+            }
+
+            100% {
+                opacity: 1.0;
+                transform: translate(-50%, -20%) scale(1.12);
+            }
+        }
+
+        @keyframes beam-flicker {
+            0% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 1.0;
+            }
+        }
+
+        /* 5 Living flame wicks */
+        .diya-flame-wick {
+            position: absolute;
+            width: 10px;
+            height: 15px;
+            margin-left: -5px;
+            margin-top: -12px;
+            border-radius: 50% 50% 35% 35% / 60% 60% 40% 40%;
+            background: radial-gradient(ellipse at bottom, #ffffff 0%, #ffff80 30%, #ff9d00 65%, #ff3b00 90%, transparent 100%);
+            box-shadow: 0 0 10px rgba(255, 180, 0, 0.95),
+                0 0 20px rgba(255, 120, 0, 0.6);
+            filter: drop-shadow(0 0 4px #ffd700);
+            pointer-events: none;
+            z-index: 4;
+            mix-blend-mode: screen;
+        }
+
+        /* Wick Positions (% based on lamp size) */
+        .wick-1 {
+            left: 7.7%;
+            top: 82%;
+            animation: flame-flicker-1 0.9s ease-in-out infinite;
+        }
+
+        .wick-2 {
+            left: 27.9%;
+            top: 83.6%;
+            animation: flame-flicker-2 1.15s ease-in-out infinite 0.2s;
+        }
+
+        .wick-3 {
+            left: 49%;
+            top: 76%;
+            animation: flame-flicker-3 0.85s ease-in-out infinite 0.4s;
+        }
+
+        .wick-4 {
+            left: 70.2%;
+            top: 83.6%;
+            animation: flame-flicker-2 1.05s ease-in-out infinite 0.15s;
+        }
+
+        .wick-5 {
+            left: 91.3%;
+            top: 82%;
+            animation: flame-flicker-1 1.2s ease-in-out infinite 0.35s;
+        }
+
+        @keyframes flame-flicker-1 {
+
+            0%,
+            100% {
+                transform: scale(1) rotate(-1deg);
+                opacity: 0.95;
+            }
+
+            25% {
+                transform: scale(1.18, 0.88) rotate(2deg);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(0.9, 1.12) rotate(-2deg);
+                opacity: 0.88;
+            }
+
+            75% {
+                transform: scale(1.08, 0.95) rotate(1deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes flame-flicker-2 {
+
+            0%,
+            100% {
+                transform: scale(0.92) rotate(2deg);
+                opacity: 0.9;
+            }
+
+            30% {
+                transform: scale(1.12, 1.05) rotate(-1deg);
+                opacity: 1;
+            }
+
+            60% {
+                transform: scale(0.88, 0.92) rotate(2deg);
+                opacity: 0.85;
+            }
+
+            85% {
+                transform: scale(1.18, 1.12) rotate(-2deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes flame-flicker-3 {
+
+            0%,
+            100% {
+                transform: scale(1.05) rotate(0deg);
+                opacity: 1;
+            }
+
+            35% {
+                transform: scale(0.92, 1.18) rotate(-2deg);
+                opacity: 0.9;
+            }
+
+            70% {
+                transform: scale(1.12, 0.88) rotate(1deg);
+                opacity: 1;
+            }
+        }
+
+        /* ===== RESPONSIVE HANGING DIYAS ===== */
+        @media (max-width: 768px) {
+            .hanging-diya-wrap.left {
+                left: 16px;
+            }
+
+            .hanging-diya-wrap.right {
+                right: 16px;
+            }
+
+            .diya-sway-left,
+            .diya-sway-right {
+                width: 72px;
+                height: 211px;
+            }
+
+            .diya-flame-wick {
+                width: 8px;
+                height: 12px;
+                margin-left: -4px;
+                margin-top: -10px;
+            }
+
+            .diya-light-beam {
+                width: 110px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hanging-diya-wrap.left {
+                left: 8px;
+            }
+
+            .hanging-diya-wrap.right {
+                right: 8px;
+            }
+
+            .diya-sway-left,
+            .diya-sway-right {
+                width: 54px;
+                height: 158px;
+            }
+
+            .diya-flame-wick {
+                width: 6px;
+                height: 10px;
+                margin-left: -3px;
+                margin-top: -8px;
+            }
+
+            .diya-light-beam {
+                width: 80px;
+                height: 90px;
+            }
+        }
+
+        /* ===== SECTIONS — SEAMLESS, NO GAPS ===== */
+        section,
+        footer {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ========================================
+           SCROLL INTRO ANIMATIONS
+           Each element type has its own entrance
+        ======================================== */
+
+        /* --- Fade Up (default) --- */
+        .anim-up {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .anim-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Fade Down --- */
+        .anim-down {
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .anim-down.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Blur In + Scale (icons, OM circles) --- */
+        .anim-blur {
+            opacity: 0;
+            transform: scale(0.5);
+            filter: blur(12px);
+            transition: opacity 0.8s ease-out,
+                transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+                filter 0.8s ease-out;
+        }
+
+        .anim-blur.visible {
+            opacity: 1;
+            transform: scale(1);
+            filter: blur(0);
+        }
+
+        /* --- Slide from Left --- */
+        .anim-left {
+            opacity: 0;
+            transform: translateX(-80px) rotate(-3deg);
+            transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .anim-left.visible {
+            opacity: 1;
+            transform: translateX(0) rotate(0);
+        }
+
+        /* --- Slide from Right --- */
+        .anim-right {
+            opacity: 0;
+            transform: translateX(80px) rotate(3deg);
+            transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .anim-right.visible {
+            opacity: 1;
+            transform: translateX(0) rotate(0);
+        }
+
+        /* --- Scale + Rotate Pop (cards) --- */
+        .anim-pop {
+            opacity: 0;
+            transform: scale(0.7) rotate(-2deg);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .anim-pop.visible {
+            opacity: 1;
+            transform: scale(1) rotate(0);
+        }
+
+        /* --- Flip In Y (headings) --- */
+        .anim-flip {
+            opacity: 0;
+            transform: perspective(800px) rotateX(40deg) translateY(30px);
+            transition: opacity 0.9s ease-out,
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .anim-flip.visible {
+            opacity: 1;
+            transform: perspective(800px) rotateX(0) translateY(0);
+        }
+
+        /* --- Zoom + Glow entrance (buttons) --- */
+        .anim-glow-in {
+            opacity: 0;
+            transform: scale(0.8);
+            filter: brightness(0.5);
+            transition: opacity 0.7s ease-out,
+                transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+                filter 0.7s ease-out;
+        }
+
+        .anim-glow-in.visible {
+            opacity: 1;
+            transform: scale(1);
+            filter: brightness(1);
+        }
+
+        /* --- Stagger children (grids, countdowns) --- */
+        .stagger>* {
+            opacity: 0;
+            transform: translateY(40px) scale(0.9);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .stagger.visible>*:nth-child(1) {
+            transition-delay: 0.08s;
+            opacity: 1;
+            transform: none;
+        }
+
+        .stagger.visible>*:nth-child(2) {
+            transition-delay: 0.18s;
+            opacity: 1;
+            transform: none;
+        }
+
+        .stagger.visible>*:nth-child(3) {
+            transition-delay: 0.28s;
+            opacity: 1;
+            transform: none;
+        }
+
+        .stagger.visible>*:nth-child(4) {
+            transition-delay: 0.38s;
+            opacity: 1;
+            transform: none;
+        }
+
+        .stagger.visible>*:nth-child(5) {
+            transition-delay: 0.48s;
+            opacity: 1;
+            transform: none;
+        }
+
+        .stagger.visible>*:nth-child(6) {
+            transition-delay: 0.58s;
+            opacity: 1;
+            transform: none;
+        }
+
+        /* ===== GLOW & DEVOTIONAL KEYFRAMES ===== */
+        @keyframes glow-pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 15px rgba(255, 215, 0, 0.2),
+                    0 0 30px rgba(255, 215, 0, 0.08);
+            }
+
+            50% {
+                box-shadow: 0 0 25px rgba(255, 215, 0, 0.5),
+                    0 0 50px rgba(255, 215, 0, 0.2),
+                    0 0 80px rgba(255, 215, 0, 0.08);
+            }
+        }
+
+        @keyframes text-glow {
+
+            0%,
+            100% {
+                text-shadow: 0 2px 12px rgba(255, 215, 0, 0.3);
+            }
+
+            50% {
+                text-shadow: 0 2px 20px rgba(255, 215, 0, 0.6),
+                    0 0 40px rgba(255, 215, 0, 0.3),
+                    0 0 80px rgba(255, 215, 0, 0.12);
+            }
+        }
+
+        @keyframes shimmer-text {
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        @keyframes float-gentle {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes diya-flicker {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(255, 165, 0, 0.4),
+                    0 0 40px rgba(255, 140, 0, 0.2),
+                    0 0 60px rgba(255, 100, 0, 0.1);
+                border-color: rgba(255, 180, 50, 0.5);
+            }
+
+            25% {
+                box-shadow: 0 0 30px rgba(255, 180, 0, 0.6),
+                    0 0 55px rgba(255, 140, 0, 0.3),
+                    0 0 80px rgba(255, 100, 0, 0.15);
+                border-color: rgba(255, 200, 80, 0.65);
+            }
+
+            50% {
+                box-shadow: 0 0 18px rgba(255, 160, 0, 0.35),
+                    0 0 35px rgba(255, 130, 0, 0.18),
+                    0 0 55px rgba(255, 90, 0, 0.08);
+                border-color: rgba(255, 170, 40, 0.45);
+            }
+
+            75% {
+                box-shadow: 0 0 28px rgba(255, 190, 0, 0.55),
+                    0 0 50px rgba(255, 150, 0, 0.28),
+                    0 0 75px rgba(255, 110, 0, 0.12);
+                border-color: rgba(255, 195, 70, 0.6);
+            }
+        }
+
+        @keyframes card-glow {
+
+            0%,
+            100% {
+                border-color: rgba(212, 175, 55, 0.3);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5),
+                    inset 0 0 40px rgba(255, 215, 0, 0.02);
+            }
+
+            50% {
+                border-color: rgba(255, 215, 0, 0.55);
+                box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+                    0 0 35px rgba(255, 215, 0, 0.08),
+                    inset 0 0 50px rgba(255, 215, 0, 0.04);
+            }
+        }
+
+        @keyframes card-shine {
+            0% {
+                left: -100%;
+            }
+
+            40% {
+                left: 150%;
+            }
+
+            100% {
+                left: 150%;
+            }
+        }
+
+        @keyframes rotate-cw {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotate-ccw {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes sacred-breathe {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.12;
+            }
+
+            50% {
+                transform: scale(1.08);
+                opacity: 0.2;
+            }
+        }
+
+        @keyframes btn-shine {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 200%;
+            }
+        }
+
+        /* ===== HERO ENTRANCE KEYFRAMES ===== */
+        @keyframes hero-fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes hero-scale-in {
+            from {
+                opacity: 0;
+                transform: scale(0.65);
+                filter: blur(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+                filter: blur(0);
+            }
+        }
+
+        .hero .swamy-hero-wrap {
+            animation: hero-scale-in 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero .small {
+            animation: hero-fade-up 0.8s ease-out 0.25s, shimmer-text 5s linear infinite;
+        }
+
+        .hero h1 {
+            animation: hero-fade-up 0.8s ease-out 0.4s, text-glow 3s ease-in-out infinite;
+        }
+
+        .hero .telugu {
+            animation: hero-fade-up 0.8s ease-out 0.55s;
+        }
+
+        .hero .gold-line {
+            animation: hero-fade-up 0.8s ease-out 0.65s;
+        }
+
+        .hero .details {
+            animation: hero-fade-up 0.8s ease-out 0.75s;
+        }
+
+        .hero .countdown {
+            animation: hero-fade-up 0.8s ease-out 0.9s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        /* Sacred mandala rings */
+        .hero-mandala {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .mandala-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            border-style: dashed;
+            border-color: rgba(255, 215, 0, 0.12);
+        }
+
+        .mandala-ring:nth-child(1) {
+            width: 460px;
+            height: 460px;
+            margin: -230px 0 0 -230px;
+            border-width: 1px;
+            animation: rotate-cw 80s linear infinite;
+        }
+
+        .mandala-ring:nth-child(2) {
+            width: 360px;
+            height: 360px;
+            margin: -180px 0 0 -180px;
+            border-width: 1px;
+            border-color: rgba(255, 200, 50, 0.1);
+            animation: rotate-ccw 55s linear infinite;
+        }
+
+        .mandala-ring:nth-child(3) {
+            width: 260px;
+            height: 260px;
+            margin: -130px 0 0 -130px;
+            border-width: 1px;
+            border-style: dotted;
+            border-color: rgba(255, 215, 0, 0.08);
+            animation: rotate-cw 40s linear infinite;
+        }
+
+        .mandala-ring:nth-child(4) {
+            width: 160px;
+            height: 160px;
+            margin: -80px 0 0 -80px;
+            border-width: 1.5px;
+            border-style: solid;
+            border-color: rgba(255, 215, 0, 0.06);
+            animation: sacred-breathe 6s ease-in-out infinite;
+        }
+
+        /* Sacred geometry corner accents */
+        .hero::before,
+        .hero::after {
+            content: '✦';
+            position: absolute;
+            font-size: 18px;
+            color: rgba(255, 215, 0, 0.15);
+            animation: sacred-breathe 5s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .hero::before {
+            top: 30px;
+            left: 30px;
+        }
+
+        .hero::after {
+            top: 30px;
+            right: 30px;
+            animation-delay: 2.5s;
+        }
+
+        /* ===== AYYAPPA SWAMY HERO CENTERPIECE ===== */
+        .swamy-hero-wrap {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 195px;
+            height: 250px;
+            margin-top: -16px;
+            /* kept higher on top */
+            margin-left: 30px;
+            /* nudged little bit right */
+            margin-bottom: 16px;
+            z-index: 5;
+        }
+
+        /* Luminous Divine Glowing Circle Light Disc Behind Img */
+        .swamy-glowing-circle {
+            position: absolute;
+            top: 48%;
+            left: 43%;
+            transform: translate(-50%, -50%);
+            width: 205px;
+            height: 205px;
+            border-radius: 50%;
+            background: radial-gradient(circle,
+                    rgba(255, 252, 220, 0.95) 0%,
+                    rgba(255, 225, 60, 0.75) 30%,
+                    rgba(255, 160, 20, 0.5) 60%,
+                    rgba(210, 80, 0, 0.2) 85%,
+                    transparent 100%);
+            border: 2px solid rgba(255, 235, 140, 0.85);
+            box-shadow:
+                0 0 25px rgba(255, 215, 0, 0.95),
+                0 0 55px rgba(255, 165, 0, 0.75),
+                0 0 95px rgba(255, 110, 0, 0.5),
+                inset 0 0 35px rgba(255, 255, 190, 0.85);
+            pointer-events: none;
+            z-index: 1;
+            animation: circle-light-pulse 3s ease-in-out infinite alternate;
+        }
+
+        /* Outer shimmering aura ring for the glowing circle */
+        .swamy-glowing-circle::before {
+            content: '';
+            position: absolute;
+            inset: -14px;
+            border-radius: 50%;
+            border: 1.5px dashed rgba(255, 225, 110, 0.45);
+            box-shadow: 0 0 25px rgba(255, 200, 50, 0.4);
+            animation: rotate-cw 28s linear infinite;
+        }
+
+        .swamy-glowing-circle::after {
+            content: '';
+            position: absolute;
+            inset: -28px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 200, 50, 0.28) 0%, transparent 70%);
+            filter: blur(8px);
+        }
+
+        @keyframes circle-light-pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(0.95);
+                box-shadow:
+                    0 0 20px rgba(255, 215, 0, 0.85),
+                    0 0 45px rgba(255, 165, 0, 0.6),
+                    0 0 75px rgba(255, 100, 0, 0.35),
+                    inset 0 0 25px rgba(255, 255, 180, 0.75);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.06);
+                box-shadow:
+                    0 0 35px rgba(255, 230, 60, 1.0),
+                    0 0 75px rgba(255, 175, 0, 0.9),
+                    0 0 120px rgba(255, 115, 0, 0.6),
+                    inset 0 0 45px rgba(255, 255, 220, 0.95);
+            }
+        }
+
+        /* Divine radiant golden halo (Aura) */
+        .swamy-halo {
+            position: absolute;
+            top: 50%;
+            left: 42%;
+            transform: translate(-50%, -50%);
+            width: 270px;
+            height: 270px;
+            border-radius: 50%;
+            background: radial-gradient(circle,
+                    rgba(255, 215, 0, 0.5) 0%,
+                    rgba(255, 170, 0, 0.3) 35%,
+                    rgba(255, 100, 0, 0.12) 58%,
+                    transparent 72%);
+            filter: blur(14px);
+            pointer-events: none;
+            z-index: 1;
+            animation: swamy-halo-pulse 3.5s ease-in-out infinite alternate;
+        }
+
+        /* Rotating sacred chakra / prabhavali rays */
+        .swamy-chakra {
+            position: absolute;
+            top: 42%;
+            left: 42%;
+            transform: translate(-50%, -50%);
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            border: 1.5px dashed rgba(255, 215, 0, 0.35);
+            pointer-events: none;
+            z-index: 1;
+            animation: rotate-cw 40s linear infinite;
+        }
+
+        .swamy-chakra::before {
+            content: '';
+            position: absolute;
+            inset: 16px;
+            border-radius: 50%;
+            border: 1.5px dotted rgba(255, 190, 50, 0.3);
+            animation: rotate-ccw 26s linear infinite;
+        }
+
+        .swamy-chakra::after {
+            content: '';
+            position: absolute;
+            inset: 34px;
+            border-radius: 50%;
+            border: 1px dashed rgba(255, 215, 0, 0.2);
+            animation: rotate-cw 18s linear infinite;
+        }
+
+        /* Lotus base divine glow */
+        .swamy-lotus-glow {
+            position: absolute;
+            bottom: -5px;
+            left: 42%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 50px;
+            border-radius: 50%;
+            background: radial-gradient(ellipse, rgba(255, 190, 50, 0.55) 0%, rgba(255, 120, 0, 0.18) 50%, transparent 75%);
+            filter: blur(10px);
+            pointer-events: none;
+            z-index: 1;
+            animation: swamy-halo-pulse 2.8s ease-in-out infinite alternate;
+        }
+
+        /* Lord Ayyappa Swamy murti */
+        .swamy-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 0 16px rgba(255, 215, 0, 0.7)) drop-shadow(0 0 38px rgba(255, 140, 0, 0.45)) drop-shadow(0 10px 22px rgba(0, 0, 0, 0.8));
+            animation: swamy-float 4.5s ease-in-out infinite;
+        }
+
+        @keyframes swamy-float {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-8px) scale(1.025);
+            }
+        }
+
+        @keyframes swamy-halo-pulse {
+            0% {
+                opacity: 0.65;
+                transform: translate(-50%, -50%) scale(0.92);
+            }
+
+            100% {
+                opacity: 1.0;
+                transform: translate(-50%, -50%) scale(1.14);
+            }
+        }
+
+        /* ===== OM / ICON CIRCLE — Diya flame effect ===== */
+        .om {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 74px;
+            height: 74px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 180, 50, 0.12) 0%, rgba(255, 215, 0, 0.04) 60%, transparent 100%);
+            border: 1.5px solid rgba(255, 180, 50, 0.45);
+            margin-bottom: 16px;
+            color: #ffd700;
+            animation: diya-flicker 2.5s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Outer glow ring */
+        .om::before {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 215, 0, 0.12);
+            animation: sacred-breathe 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .om svg {
+            width: 34px;
+            height: 34px;
+            stroke: #ffd700;
+            stroke-width: 1.8;
+            filter: drop-shadow(0 0 8px rgba(255, 180, 0, 0.5));
+        }
+
+        /* ===== SMALL LABEL — Shimmer gradient ===== */
+        .small {
+            color: #d4af37;
+            letter-spacing: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #c9a030, #ffe66d, #d4af37, #ffe66d, #c9a030);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer-text 5s linear infinite;
+        }
+
+        /* ===== HEADINGS ===== */
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.6rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+            animation: text-glow 3s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.9rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            color: #ffd700;
+            margin: 10px 0 5px;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+        }
+
+        /* ===== GOLD LINE with diamond ===== */
+        .gold-line {
+            width: 130px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ffd700, transparent);
+            margin: 16px auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .gold-line::after {
+            content: '◆';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffd700;
+            font-size: 8px;
+            text-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+        }
+
+        /* ===== TELUGU TEXT ===== */
+        .telugu {
+            font-family: 'Noto Serif Telugu', serif;
+            color: #f3d299;
+            font-size: 1.15rem;
+            margin-top: 10px;
+        }
+
+        /* ===== DETAILS TEXT ===== */
+        .details {
+            font-size: 1.05rem;
+            color: #f7e7ce;
+            margin: 12px 0;
+        }
+
+        /* ===== CARDS — Devotional glow ===== */
+        .card {
+            background: linear-gradient(170deg, rgba(255, 215, 0, 0.05) 0%, rgba(139, 69, 19, 0.04) 50%, rgba(255, 215, 0, 0.03) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 22px;
+            padding: 40px 30px;
+            margin-top: 20px;
+            animation: card-glow 5s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Shimmer sweep on cards */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.05), transparent);
+            animation: card-shine 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        /* Corner decoration on cards */
+        .card::after {
+            content: '🙏';
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            font-size: 14px;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        /* ===== FAMILY / DEVOTIONAL CHANT CARD ===== */
+        .family-section {
+            padding-top: 25px;
+            padding-bottom: 35px;
+        }
+
+        .family-card-wrap {
+            max-width: 440px;
+            margin: 26px auto 0;
+            padding: 0 10px;
+        }
+
+        .family-card {
+            background: linear-gradient(165deg, rgba(38, 16, 9, 0.85) 0%, rgba(20, 8, 5, 0.95) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 20px;
+            padding: 18px 18px 24px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.65),
+                0 0 30px rgba(255, 215, 0, 0.12),
+                inset 0 1px 0 rgba(255, 215, 0, 0.25);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s ease,
+                border-color 0.4s ease;
+        }
+
+        .family-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.08), transparent);
+            animation: card-shine 9s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .family-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 215, 0, 0.65);
+            box-shadow: 0 20px 55px rgba(0, 0, 0, 0.75),
+                0 0 40px rgba(255, 215, 0, 0.25);
+        }
+
+        .family-img-frame {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 215, 0, 0.35);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.55);
+            line-height: 0;
+        }
+
+        .family-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            border-radius: 14px;
+            transition: transform 0.6s ease;
+        }
+
+        .family-card:hover .family-img {
+            transform: scale(1.02);
+        }
+
+        .family-img-glow {
+            position: absolute;
+            inset: 0;
+            border-radius: 14px;
+            box-shadow: inset 0 0 25px rgba(255, 200, 50, 0.18),
+                inset 0 -25px 35px rgba(10, 3, 2, 0.45);
+            pointer-events: none;
+        }
+
+        .family-chant-wrap {
+            margin-top: 18px;
+            padding: 0 6px;
+        }
+
+        .family-chant-tag {
+            font-size: 11px;
+            letter-spacing: 2.5px;
+            color: #d4af37;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            opacity: 0.85;
+        }
+
+        .family-chant-text {
+            font-family: 'Noto Serif Telugu', serif;
+            color: #ffd700;
+            font-size: 1.22rem;
+            line-height: 1.85;
+            font-weight: 600;
+            margin: 0;
+            text-shadow: 0 0 14px rgba(255, 215, 0, 0.45),
+                0 2px 4px rgba(0, 0, 0, 0.8);
+            animation: text-glow 3.5s ease-in-out infinite;
+        }
+
+        /* ===== COUNTDOWN ===== */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .time-box {
+            background: radial-gradient(circle at center, rgba(255, 180, 50, 0.1) 0%, rgba(255, 215, 0, 0.04) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 16px;
+            padding: 20px 22px;
+            min-width: 82px;
+            animation: diya-flicker 3s ease-in-out infinite;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .time-box:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .time-box:nth-child(3) {
+            animation-delay: 0.8s;
+        }
+
+        .time-box:nth-child(4) {
+            animation-delay: 1.2s;
+        }
+
+        .time-box:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .time-box span {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffd700;
+            filter: drop-shadow(0 0 10px rgba(255, 180, 0, 0.5));
+        }
+
+        .time-box label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #c9a66c;
+            margin-top: 4px;
+            display: block;
+        }
+
+        /* ===== SECTION WRAPPER — Devotional BG accents ===== */
+        .section-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Radial glow behind each section */
+        .section-wrap::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 400px;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(ellipse, rgba(255, 150, 0, 0.04) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Alternate sections get a slight warm tint */
+        .section-wrap:nth-child(even)::before {
+            background: radial-gradient(ellipse, rgba(200, 100, 0, 0.04) 0%, transparent 70%);
+        }
+
+        /* ===== SCHEDULE GRID ===== */
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .schedule-grid>div {
+            background: radial-gradient(circle at center, rgba(255, 180, 50, 0.06) 0%, rgba(255, 215, 0, 0.02) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 18px;
+            padding: 28px 15px;
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.4s ease,
+                border-color 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .schedule-grid>div:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4),
+                0 0 25px rgba(255, 180, 0, 0.1);
+            border-color: rgba(255, 215, 0, 0.5);
+        }
+
+        /* ===== SYMBOL ICONS ===== */
+        .symbol {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 180, 50, 0.12) 0%, transparent 70%);
+            border: 1.5px solid rgba(212, 175, 55, 0.35);
+            color: #ffd700;
+            margin-bottom: 8px;
+            animation: diya-flicker 3.5s ease-in-out infinite;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .schedule-grid>div:nth-child(2) .symbol {
+            animation-delay: 0.5s;
+        }
+
+        .schedule-grid>div:nth-child(3) .symbol {
+            animation-delay: 1s;
+        }
+
+        .schedule-grid>div:nth-child(4) .symbol {
+            animation-delay: 1.5s;
+        }
+
+        .schedule-grid>div:hover .symbol {
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        .symbol svg {
+            width: 28px;
+            height: 28px;
+            stroke: #ffd700;
+            stroke-width: 1.8;
+            filter: drop-shadow(0 0 6px rgba(255, 180, 0, 0.4));
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 14px;
+            padding: 13px 28px;
+            background: linear-gradient(135deg, #d4af37, #c4922a, #dbb84a);
+            color: #1a0505;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.92rem;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.35s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 14px;
+            padding: 12px 24px;
+            background: rgba(255, 215, 0, 0.08);
+            color: #ffd700;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1.5px solid rgba(212, 175, 55, 0.5);
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.92rem;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.35s ease,
+                background 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 215, 0, 0.16);
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.25);
+        }
+
+        .btn-outline svg {
+            width: 17px;
+            height: 17px;
+            stroke: #ffd700;
+            stroke-width: 2.2;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: linear-gradient(135deg, #2b0909, #120303);
+            border: 1px solid rgba(255, 215, 0, 0.6);
+            color: #ffd700;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.3);
+            z-index: 999;
+            opacity: 0;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Interactive touch/click golden sparkles */
+        .touch-sparkle {
+            position: fixed;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #fff8b3;
+            box-shadow: 0 0 8px #ffd700, 0 0 16px #ff8c00;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            animation: touch-spark-fly 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes touch-spark-fly {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.3);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(0.2);
+            }
+        }
+
+        /* Sacred Gayatri Mantra Banner */
+        .sloka-banner {
+            max-width: 650px;
+            margin: 35px auto 0;
+            padding: 22px 24px;
+            border-radius: 18px;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.07) 0%, rgba(255, 180, 50, 0.02) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45), inset 0 0 30px rgba(255, 215, 0, 0.02);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sloka-banner::before {
+            content: '✦';
+            position: absolute;
+            top: 10px;
+            left: 12px;
+            font-size: 11px;
+            color: rgba(255, 215, 0, 0.4);
+        }
+
+        .sloka-banner::after {
+            content: '✦';
+            position: absolute;
+            bottom: 10px;
+            right: 12px;
+            font-size: 11px;
+            color: rgba(255, 215, 0, 0.4);
+        }
+
+        /* Animated shine strip */
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+            animation: btn-shine 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .btn svg {
+            width: 18px;
+            height: 18px;
+            stroke: #1a0505;
+            stroke-width: 2.2;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5),
+                0 0 50px rgba(255, 215, 0, 0.12);
+        }
+
+        .btn:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+
+        /* ===== INLINE SECTION DIVIDER ===== */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 280px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .divider .line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+        }
+
+        .divider .diamond {
+            color: #ffd700;
+            font-size: 10px;
+            opacity: 0.5;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+            animation: sacred-breathe 4s ease-in-out infinite;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.25), transparent);
+        }
+
+        /* ===== SCROLL PROGRESS BAR ===== */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #c4922a, #ffd700, #ffe66d, #ffd700, #c4922a);
+            z-index: 100;
+            transition: width 0.12s ease-out;
+            box-shadow: 0 0 12px rgba(255, 215, 0, 0.5),
+                0 0 25px rgba(255, 180, 0, 0.2);
+        }
+
+        /* ===== RESPONSIVE — TABLETS ===== */
+        @media (max-width: 768px) {
+
+            .swamy-hero-wrap {
+                width: 165px;
+                height: 212px;
+                margin-top: -12px;
+                margin-left: 16px;
+            }
+
+            .swamy-glowing-circle {
+                width: 175px;
+                height: 175px;
+            }
+
+            .swamy-halo {
+                width: 220px;
+                height: 220px;
+            }
+
+            .swamy-chakra {
+                width: 190px;
+                height: 190px;
+            }
+
+            section,
+            footer {
+                padding: 45px 16px;
+            }
+
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            h2 {
+                font-size: 1.45rem;
+                margin-bottom: 16px;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            .small {
+                font-size: 11px;
+                letter-spacing: 3px;
+            }
+
+            .telugu {
+                font-size: 1.05rem;
+            }
+
+            .details {
+                font-size: 0.95rem;
+            }
+
+            .card {
+                padding: 30px 20px;
+                border-radius: 18px;
+            }
+
+            .hero-mandala {
+                width: 360px;
+                height: 360px;
+            }
+
+            .mandala-ring:nth-child(1) {
+                width: 340px;
+                height: 340px;
+                margin: -170px 0 0 -170px;
+            }
+
+            .mandala-ring:nth-child(2) {
+                width: 260px;
+                height: 260px;
+                margin: -130px 0 0 -130px;
+            }
+
+            .mandala-ring:nth-child(3) {
+                width: 180px;
+                height: 180px;
+                margin: -90px 0 0 -90px;
+            }
+
+            .mandala-ring:nth-child(4) {
+                width: 110px;
+                height: 110px;
+                margin: -55px 0 0 -55px;
+            }
+
+            .schedule-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+
+            .countdown {
+                gap: 10px;
+            }
+
+            .time-box {
+                min-width: 70px;
+                padding: 16px 14px;
+            }
+
+            .time-box span {
+                font-size: 1.6rem;
+            }
+
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ===== RESPONSIVE — PHONES ===== */
+        @media (max-width: 480px) {
+
+            .swamy-hero-wrap {
+                width: 135px;
+                height: 174px;
+                margin-top: -8px;
+                margin-left: 14px;
+                margin-bottom: 10px;
+            }
+
+            .swamy-glowing-circle {
+                width: 142px;
+                height: 142px;
+            }
+
+            .swamy-halo {
+                width: 180px;
+                height: 180px;
+            }
+
+            .swamy-chakra {
+                width: 150px;
+                height: 150px;
+            }
+
+            .swamy-lotus-glow {
+                width: 130px;
+                height: 38px;
+            }
+
+            section,
+            footer {
+                padding: 38px 14px;
+            }
+
+            h1 {
+                font-size: 1.55rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+                margin-bottom: 14px;
+            }
+
+            h3 {
+                font-size: 0.95rem;
+            }
+
+            .small {
+                font-size: 10px;
+                letter-spacing: 2.5px;
+            }
+
+            .telugu {
+                font-size: 0.95rem;
+            }
+
+            .details {
+                font-size: 0.88rem;
+            }
+
+            .om {
+                width: 62px;
+                height: 62px;
+            }
+
+            .om svg {
+                width: 28px;
+                height: 28px;
+            }
+
+            .card {
+                padding: 24px 16px;
+                border-radius: 16px;
+            }
+
+            .mandala-ring:nth-child(1) {
+                width: 280px;
+                height: 280px;
+                margin: -140px 0 0 -140px;
+            }
+
+            .mandala-ring:nth-child(2) {
+                width: 210px;
+                height: 210px;
+                margin: -105px 0 0 -105px;
+            }
+
+            .mandala-ring:nth-child(3) {
+                width: 140px;
+                height: 140px;
+                margin: -70px 0 0 -70px;
+            }
+
+            .mandala-ring:nth-child(4) {
+                width: 90px;
+                height: 90px;
+                margin: -45px 0 0 -45px;
+            }
+
+            .schedule-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .schedule-grid>div {
+                padding: 20px 10px;
+            }
+
+            .symbol {
+                width: 48px;
+                height: 48px;
+            }
+
+            .symbol svg {
+                width: 22px;
+                height: 22px;
+            }
+
+            .countdown {
+                gap: 8px;
+            }
+
+            .time-box {
+                min-width: 65px;
+                padding: 14px 10px;
+                border-radius: 12px;
+            }
+
+            .time-box span {
+                font-size: 1.35rem;
+            }
+
+            .time-box label {
+                font-size: 0.65rem;
+                letter-spacing: 1px;
+            }
+
+            .btn {
+                padding: 11px 20px;
+                font-size: 0.85rem;
+                gap: 6px;
+            }
+
+            .gold-line {
+                width: 90px;
+            }
+
+            .hero::before {
+                top: 16px;
+                left: 16px;
+                font-size: 14px;
+            }
+
+            .hero::after {
+                top: 16px;
+                right: 16px;
+                font-size: 14px;
+            }
+
+            .section-wrap::before {
+                width: 350px;
+                height: 250px;
+            }
+
+            .family-section {
+                padding: 18px 12px 25px;
+            }
+
+            .family-card-wrap {
+                max-width: 100%;
+                padding: 0 4px;
+            }
+
+            .family-card {
+                padding: 14px 14px 20px;
+                border-radius: 16px;
+            }
+
+            .family-chant-text {
+                font-size: 1.05rem;
+                line-height: 1.7;
+            }
+        }
+
+        /* ===== VERY SMALL ===== */
+        @media (max-width: 340px) {
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            .schedule-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .time-box {
+                min-width: 58px;
+                padding: 12px 8px;
+            }
+
+            .time-box span {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* ===== REDUCE MOTION ===== */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SCROLL PROGRESS BAR -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- DEVOTIONAL BG CANVAS (particles + ambient light) -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- HANGING BRASS DIYAS (Left & Right) -->
+    <div class="hanging-diya-wrap left" id="diyaLeft">
+        <div class="diya-sway-left">
+            <div class="diya-ambient-glow"></div>
+            <div class="diya-light-beam"></div>
+            <img src="hanging_diya.png" alt="Hanging Brass Diya" class="diya-img">
+            <!-- 5 Glowing Wick Flames -->
+            <div class="diya-flame-wick wick-1"></div>
+            <div class="diya-flame-wick wick-2"></div>
+            <div class="diya-flame-wick wick-3"></div>
+            <div class="diya-flame-wick wick-4"></div>
+            <div class="diya-flame-wick wick-5"></div>
+        </div>
+    </div>
+
+    <div class="hanging-diya-wrap right" id="diyaRight">
+        <div class="diya-sway-right">
+            <div class="diya-ambient-glow"></div>
+            <div class="diya-light-beam"></div>
+            <img src="hanging_diya.png" alt="Hanging Brass Diya" class="diya-img" style="transform: scaleX(-1);">
+            <!-- 5 Glowing Wick Flames -->
+            <div class="diya-flame-wick wick-1"></div>
+            <div class="diya-flame-wick wick-2"></div>
+            <div class="diya-flame-wick wick-3"></div>
+            <div class="diya-flame-wick wick-4"></div>
+            <div class="diya-flame-wick wick-5"></div>
+        </div>
+    </div>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="heroSection">
+
+        <!-- Mandala rings -->
+        <div class="hero-mandala">
+            <div class="mandala-ring"></div>
+            <div class="mandala-ring"></div>
+            <div class="mandala-ring"></div>
+            <div class="mandala-ring"></div>
+        </div>
+
+        <!-- AYYAPPA SWAMY DIVINE CENTERPIECE -->
+        <div class="swamy-hero-wrap">
+            <!-- Radiant Glowing Circle Light Effect Behind Img -->
+            <div class="swamy-glowing-circle"></div>
+            <!-- Radiant Golden Aura Halo -->
+            <div class="swamy-halo"></div>
+            <!-- Rotating Sacred Chakra / Prabhavali Rays -->
+            <div class="swamy-chakra"></div>
+            <!-- Lotus Base Glow -->
+            <div class="swamy-lotus-glow"></div>
+            <!-- Lord Ayyappa Swamy Idol -->
+            <img src="ayyappa_swamy.png" alt="Lord Ayyappa Swamy" class="swamy-img">
+        </div>
+        <div class="small">SWAMIYE SARANAM AYYAPPA</div>
+        <h1>Ayyappa Swamy Pooja</h1>
+        <p class="telugu">శ్రీ అయ్యప్ప స్వామి వారి పూజా ఆహ్వానం</p>
+        <div class="gold-line"></div>
+        <p class="details">
+            We cordially invite you and your family to join us for the sacred<br>
+            <strong>Ayyappa Swamy Pooja</strong> on <strong>Sunday, 15 November 2026</strong> from <strong>9:00
+                AM</strong> onwards.
+        </p>
+
+        <div class="countdown" id="countdownSection">
+            <div class="time-box">
+                <span id="days">00</span>
+                <label>Days</label>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <label>Hours</label>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <label>Minutes</label>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <label>Seconds</label>
+            </div>
+        </div>
+
+        <div class="button-group" style="margin-top: 25px;">
+            <a class="btn anim-glow-in" href="#" onclick="addToCalendar(); return false;" style="margin-top: 0;">
+                <i data-lucide="calendar-plus"></i>
+                Add to Calendar
+            </a>
+            <a class="btn-outline anim-glow-in" href="#venueSection" style="margin-top: 0;">
+                <i data-lucide="map-pin"></i>
+                Venue Details
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== DEVOTIONAL BLESSINGS & FAMILY ==================== -->
+    <div class="section-wrap">
+        <section class="family-section">
+            <div class="divider anim-up">
+                <span class="line"></span>
+                <span class="diamond">◆</span>
+                <span class="line"></span>
+            </div>
+
+            <div class="small anim-left" style="margin-top: 28px;">DEVOTIONAL BLESSINGS</div>
+
+            <div class="family-card-wrap anim-pop">
+                <div class="family-card">
+                    <div class="family-img-frame">
+                        <img src="family.jpg" alt="Ayyappa Swamy Pooja" class="family-img">
+                        <div class="family-img-glow"></div>
+                    </div>
+                    <div class="family-chant-wrap anim-up">
+                        <div class="family-chant-tag">॥ శ్రీ అయ్యప్ప శరణుఘోష ॥</div>
+                        <p class="family-chant-text">
+                            స్వామియే అయ్యప్పో అయ్యప్పో స్వామియే..<br>
+                            స్వామి శరణం అయ్యప్ప శరణం.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==================== POOJA SCHEDULE ==================== -->
+    <div class="section-wrap">
+        <section>
+            <div class="divider anim-up">
+                <span class="line"></span>
+                <span class="diamond">◆</span>
+                <span class="line"></span>
+            </div>
+
+            <div class="small anim-left" style="margin-top: 30px;">SACRED RITUALS</div>
+            <h2 class="anim-flip">Pooja Schedule</h2>
+            <div class="schedule-grid stagger">
+                <div>
+                    <div class="symbol"><i data-lucide="flame-kindling"></i></div>
+                    <h3>Ganapathi Pooja</h3>
+                    <p>గణపతి పూజ</p>
+                </div>
+                <div>
+                    <div class="symbol"><i data-lucide="music"></i></div>
+                    <h3>Bhajana &amp; Padi Pooja</h3>
+                    <p>భజన &amp; పడి పూజ</p>
+                </div>
+                <div>
+                    <div class="symbol"><i data-lucide="sparkles"></i></div>
+                    <h3>Maha Harathi</h3>
+                    <p>మహా హారతి</p>
+                </div>
+                <div>
+                    <div class="symbol"><i data-lucide="soup"></i></div>
+                    <h3>Prasadam</h3>
+                    <p>ప్రసాద వితరణ</p>
+                </div>
+            </div>
+
+            <!-- Sacred Ayyappa Gayatri Mantra Banner -->
+            <div class="sloka-banner anim-blur">
+                <div
+                    style="font-size: 13px; color: #d4af37; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 8px;">
+                    ॥ శ్రీ అయ్యప్ప గాయత్రీ మంత్రం ॥</div>
+                <p
+                    style="font-family: 'Noto Serif Telugu', serif; color: #ffd700; font-size: 1.15rem; line-height: 1.8; text-shadow: 0 0 10px rgba(255, 215, 0, 0.35);">
+                    ఓం భూతనాథాయ విద్మహే భవపుత్రాయ ధీమహి ।<br>
+                    తన్నో శాస్తా ప్రచోదయాత్ ॥
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==================== VENUE ==================== -->
+    <div class="section-wrap" id="venueSection">
+        <section>
+            <div class="divider anim-up">
+                <span class="line"></span>
+                <span class="diamond">◆</span>
+                <span class="line"></span>
+            </div>
+
+            <div class="small anim-right" style="margin-top: 30px;">VENUE DETAILS</div>
+            <h2 class="anim-flip">Where to Join Us</h2>
+
+            <div class="card anim-pop">
+                <div class="om"><i data-lucide="map-pin"></i></div>
+                <h2>Pooja Venue</h2>
+                <p class="details" id="venue">
+                    AT OUR HOME<br>
+                    venkateswara temple back side, annavaram<br>
+                    palakonda
+                </p>
+                <div class="button-group">
+                    <a class="btn anim-glow-in" id="mapLink" href="#" onclick="getDirections(); return false;">
+                        <i data-lucide="navigation"></i>
+                        Get Directions
+                    </a>
+                    <button class="btn-outline anim-glow-in" onclick="copyAddress(); return false;">
+                        <i data-lucide="copy"></i>
+                        Copy Address
+                    </button>
+                    <button class="btn-outline anim-glow-in" onclick="addToCalendar(); return false;">
+                        <i data-lucide="calendar-plus"></i>
+                        Add to Calendar
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==================== PRASADAM ==================== -->
+    <div class="section-wrap">
+        <section>
+            <div class="divider anim-up">
+                <span class="line"></span>
+                <span class="diamond">◆</span>
+                <span class="line"></span>
+            </div>
+
+            <div class="small anim-left" style="margin-top: 30px;">WITH DEVOTION AND LOVE</div>
+            <h2 class="anim-flip">Prasadam Invitation</h2>
+
+            <div class="card anim-pop">
+                <div class="om"><i data-lucide="utensils"></i></div>
+                <p class="details">
+                    Please join us with your family
+                    for the sacred prasadam after the pooja.
+                </p>
+                <p class="telugu">
+                    పూజ అనంతరం ప్రసాద వితరణ
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="om anim-blur"><i data-lucide="flower-2"></i></div>
+        <h2 class="anim-flip">Swamiye Saranam Ayyappa</h2>
+        <div class="gold-line anim-up"></div>
+        <p class="telugu anim-up">మీ రాకే మాకు ఆనందం</p>
+        <p class="anim-up" style="margin-top: 20px">
+            With Regards,<br>
+            <strong id="host">Organising Family</strong>
+        </p>
+        <button class="btn anim-glow-in" onclick="shareInvitation()">
+            <i data-lucide="share-2"></i>
+            Share Invitation on WhatsApp
+        </button>
+        <p class="anim-up" style="margin-top: 30px; color: #c9a66c; font-size: 13px">
+            © 2026 Ayyappa Swamy Pooja
+        </p>
+    </footer>
+
+    <script>
+        // =============================================
+        // INITIALIZE LUCIDE ICONS
+        // =============================================
+        lucide.createIcons();
+
+        // =============================================
+        // DEVOTIONAL BACKGROUND CANVAS
+        // — Bright golden sparkles rising like camphor smoke
+        // — Visible warm ambient light orbs
+        // =============================================
+        (function () {
+            const canvas = document.getElementById('bg-canvas');
+            const ctx = canvas.getContext('2d');
+            let W, H;
+            const sparkles = [];
+            const orbs = [];
+            const SPARKLE_COUNT = 70;
+            const ORB_COUNT = 8;
+
+            function resize() {
+                W = canvas.width = window.innerWidth;
+                H = canvas.height = window.innerHeight;
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            // --- Sparkle particle (bright, rising) ---
+            class Sparkle {
+                constructor() { this.init(); }
+                init() {
+                    this.x = Math.random() * W;
+                    this.y = Math.random() * H;
+                    this.size = Math.random() * 3 + 1;
+                    this.vy = -(Math.random() * 0.6 + 0.2);
+                    this.vx = (Math.random() - 0.5) * 0.35;
+                    this.alpha = Math.random() * 0.6 + 0.15;
+                    this.dir = Math.random() > 0.5 ? 1 : -1;
+                    this.hue = 40 + Math.random() * 15; // warm gold range
+                }
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    this.alpha += this.dir * 0.006;
+                    if (this.alpha > 0.8) this.dir = -1;
+                    if (this.alpha < 0.08) this.dir = 1;
+                    if (this.y < -10 || this.x < -10 || this.x > W + 10) {
+                        this.init();
+                        this.y = H + 10;
+                    }
+                }
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = `hsla(${this.hue}, 100%, 65%, ${this.alpha})`;
+                    ctx.shadowBlur = 15;
+                    ctx.shadowColor = `hsla(${this.hue}, 100%, 55%, ${this.alpha * 0.8})`;
+                    ctx.fill();
+                    ctx.shadowBlur = 0;
+                }
+            }
+
+            // --- Ambient orb (warm glowing ball, clearly visible) ---
+            class Orb {
+                constructor() { this.init(); }
+                init() {
+                    this.x = Math.random() * W;
+                    this.y = Math.random() * H;
+                    this.r = Math.random() * 150 + 80;
+                    this.vx = (Math.random() - 0.5) * 0.2;
+                    this.vy = (Math.random() - 0.5) * 0.15;
+                    this.baseAlpha = Math.random() * 0.06 + 0.03;
+                    this.pulse = Math.random() * Math.PI * 2;
+                    this.pulseSpeed = Math.random() * 0.01 + 0.004;
+                }
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    this.pulse += this.pulseSpeed;
+                    if (this.x < -this.r) this.x = W + this.r;
+                    if (this.x > W + this.r) this.x = -this.r;
+                    if (this.y < -this.r) this.y = H + this.r;
+                    if (this.y > H + this.r) this.y = -this.r;
+                }
+                draw() {
+                    const a = this.baseAlpha + Math.sin(this.pulse) * 0.025;
+                    const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r);
+                    grad.addColorStop(0, `rgba(255, 170, 30, ${a * 3})`);
+                    grad.addColorStop(0.3, `rgba(255, 140, 0, ${a * 1.8})`);
+                    grad.addColorStop(0.7, `rgba(255, 100, 0, ${a * 0.6})`);
+                    grad.addColorStop(1, 'rgba(255, 80, 0, 0)');
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+                    ctx.fillStyle = grad;
+                    ctx.fill();
+                }
+            }
+
+            for (let i = 0; i < SPARKLE_COUNT; i++) sparkles.push(new Sparkle());
+            for (let i = 0; i < ORB_COUNT; i++) orbs.push(new Orb());
+
+            function animate() {
+                ctx.clearRect(0, 0, W, H);
+                orbs.forEach(o => { o.update(); o.draw(); });
+                sparkles.forEach(s => { s.update(); s.draw(); });
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        })();
+
+        // =============================================
+        // HERO HANGING DIYAS — Fade out on scroll
+        // =============================================
+        (function () {
+            const hero = document.getElementById('heroSection');
+            const diyaLeft = document.getElementById('diyaLeft');
+            const diyaRight = document.getElementById('diyaRight');
+
+            window.addEventListener('scroll', function () {
+                const heroBottom = hero.offsetTop + hero.offsetHeight;
+                const scrollY = window.scrollY || window.pageYOffset;
+                const fadePoint = heroBottom * 0.45;
+
+                if (scrollY < fadePoint) {
+                    diyaLeft.classList.remove('fade-out');
+                    diyaRight.classList.remove('fade-out');
+                } else {
+                    diyaLeft.classList.add('fade-out');
+                    diyaRight.classList.add('fade-out');
+                }
+            }, { passive: true });
+        })();
+
+        // =============================================
+        // SCROLL INTRO ANIMATIONS (IntersectionObserver)
+        // Re-triggers animations every time you scroll down
+        // =============================================
+        (function () {
+            const animClasses = [
+                '.anim-up', '.anim-down', '.anim-left', '.anim-right',
+                '.anim-blur', '.anim-pop', '.anim-flip', '.anim-glow-in',
+                '.stagger'
+            ];
+            const els = document.querySelectorAll(animClasses.join(','));
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const el = entry.target;
+                    if (entry.isIntersecting) {
+                        const delay = el.dataset.delay;
+                        if (delay) {
+                            el._animTimer = setTimeout(() => {
+                                el.classList.add('visible');
+                            }, parseInt(delay));
+                        } else {
+                            el.classList.add('visible');
+                        }
+                    } else {
+                        // When element leaves the screen, reset so animation replays on next scroll!
+                        if (el._animTimer) {
+                            clearTimeout(el._animTimer);
+                            el._animTimer = null;
+                        }
+                        el.classList.remove('visible');
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            els.forEach(el => observer.observe(el));
+        })();
+
+        // =============================================
+        // SCROLL PROGRESS BAR
+        // =============================================
+        (function () {
+            const bar = document.getElementById('scrollProgress');
+            window.addEventListener('scroll', () => {
+                const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                bar.style.width = ((scrollTop / scrollHeight) * 100) + '%';
+            }, { passive: true });
+        })();
+
+        // =============================================
+        // COUNTDOWN
+        // =============================================
+        const eventDate = new Date(2026, 10, 15, 9, 0, 0).getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const d = eventDate - now;
+
+            if (d <= 0) {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+
+            document.getElementById("days").innerText =
+                String(Math.floor(d / 86400000)).padStart(2, '0');
+            document.getElementById("hours").innerText =
+                String(Math.floor((d / 3600000) % 24)).padStart(2, '0');
+            document.getElementById("minutes").innerText =
+                String(Math.floor((d / 60000) % 60)).padStart(2, '0');
+            document.getElementById("seconds").innerText =
+                String(Math.floor((d / 1000) % 60)).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // =============================================
+        // GET DIRECTIONS (from current location)
+        // =============================================
+        function getDirections() {
+            var dest = 'venkateswara+temple+back+side,+annavaram,+palakonda';
+            // Google Maps directions with current location as origin
+            var url = 'https://www.google.com/maps/dir/?api=1' +
+                '&origin=My+Location' +
+                '&destination=' + dest +
+                '&travelmode=driving';
+            window.open(url, '_blank');
+        }
+
+        // =============================================
+        // WHATSAPP SHARE (plain text, no special chars)
+        // =============================================
+        function shareInvitation() {
+            var msg = 'Swamiye Saranam Ayyappa\n\n' +
+                'You are cordially invited to Ayyappa Swamy Pooja.\n\n' +
+                'Date: 15 November 2026 (Sunday)\n' +
+                'Time: 9:00 AM onwards\n' +
+                'Venue: Venkateswara Temple Back Side, Annavaram, Palakonda\n\n' +
+                'Please join us with your family.\n\n' +
+                'Swamiye Saranam Ayyappa';
+
+            window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
+        }
+
+        // =============================================
+        // ADD TO GOOGLE CALENDAR
+        // =============================================
+        function addToCalendar() {
+            var title = encodeURIComponent("Ayyappa Swamy Pooja");
+            var details = encodeURIComponent("Swamiye Saranam Ayyappa! You and your family are cordially invited to the sacred Ayyappa Swamy Pooja.");
+            var location = encodeURIComponent("Venkateswara Temple Back Side, Annavaram, Palakonda");
+            var dates = "20261115T033000Z/20261115T083000Z";
+            var url = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + title + "&dates=" + dates + "&details=" + details + "&location=" + location;
+            window.open(url, '_blank');
+        }
+
+        // =============================================
+        // COPY ADDRESS TO CLIPBOARD
+        // =============================================
+        function copyAddress() {
+            var addr = "AT OUR HOME, Venkateswara temple back side, Annavaram, Palakonda";
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(addr).then(function () {
+                    showToast("Address copied to clipboard! ✓");
+                }).catch(function () {
+                    showToast(addr);
+                });
+            } else {
+                showToast(addr);
+            }
+        }
+
+        function showToast(msg) {
+            var toast = document.getElementById('toastNotice');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'toastNotice';
+                toast.className = 'toast';
+                document.body.appendChild(toast);
+            }
+            toast.innerText = msg;
+            toast.classList.add('show');
+            setTimeout(function () { toast.classList.remove('show'); }, 2800);
+        }
+
+        // =============================================
+        // INTERACTIVE TOUCH / CLICK GOLDEN SPARKLES
+        // =============================================
+        document.addEventListener('pointerdown', function (e) {
+            // Ignore click on links and buttons
+            if (e.target.closest('a, button, input')) return;
+            for (var i = 0; i < 7; i++) {
+                var spark = document.createElement('div');
+                spark.className = 'touch-sparkle';
+                var angle = Math.random() * Math.PI * 2;
+                var dist = Math.random() * 45 + 15;
+                var tx = Math.cos(angle) * dist;
+                var ty = Math.sin(angle) * dist - 15;
+                spark.style.left = e.clientX + 'px';
+                spark.style.top = e.clientY + 'px';
+                spark.style.setProperty('--tx', tx + 'px');
+                spark.style.setProperty('--ty', ty + 'px');
+                document.body.appendChild(spark);
+                (function (el) {
+                    setTimeout(function () { el.remove(); }, 700);
+                })(spark);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
